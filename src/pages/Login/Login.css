@@ -1,0 +1,35 @@
+.login-container {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.login-box {
+    width: 400px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 5px #caca;
+}
+
+.login-welcome {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.login-data {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(185, 218, 226);
+}
+
+.login-data h3 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.login-data ul li {
+    list-style: none;
+    color: rgba(19, 1, 19, 0.667);
+}

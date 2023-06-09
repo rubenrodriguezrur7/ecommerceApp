@@ -1,0 +1,29 @@
+.form {
+    color: #ababab;
+}
+
+.form div {
+    margin-top: 20px;
+}
+
+.form-input {
+    width: 100%;
+    height: 35px;
+}
+
+.bx bx-low-vision {
+    width: 100%;
+}
+
+.form-login_button {
+    width: 100%;
+    height: 35px;
+    margin-top: 20px;
+    background-color: #f85555;
+    text-align: center;
+}
+
+.form-login_button button {
+    background-color: #f85555;
+    border: none;
+}

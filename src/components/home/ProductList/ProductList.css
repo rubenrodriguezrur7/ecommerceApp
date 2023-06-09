@@ -1,0 +1,11 @@
+.product-list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  
+  .product-list__item {
+    width: 100%;
+    max-width: 300px;
+    list-style: none;
+  }
