@@ -1,6 +1,15 @@
+.link {
+    text-decoration: none;
+}
+
 .product-cart {
     width: 300px;
+    height: 400px;
+    margin-top: 2opx;
+    margin-bottom: 30px;
     padding: 10px;
+    background-color: white;
+    border-radius: 10px;
 }
 
 .product-cart_header {
@@ -17,12 +26,12 @@
     position: absolute;
     top: 0;
     left: 50%;
-    width: 28%;
+    width: 100%;
     height: 20rem;
     object-fit: contain;
     transform: translateX(-50%);
     transition: opacity 0.3s ease-in;
-    bo
+    
 }
 
 .product-cart_container-img--hidden {

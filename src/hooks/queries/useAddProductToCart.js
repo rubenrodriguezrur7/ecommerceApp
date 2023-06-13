@@ -9,9 +9,9 @@ export const useAddProductToCart = () => {
 
   const mutation = useMutation({
     mutationFn: ({ quantity, productId }) =>
-      addProductToCart({ token,quantity, productId }),
+      addProductToCart({ token, quantity, productId }),
       onSuccess: async () => {
-      await queryClient.invalidateQueries({ queryKey: ["cart"]});
+        await queryClient.invalidateQueries({ queryKey: ["cart"] });
      },
   });
 

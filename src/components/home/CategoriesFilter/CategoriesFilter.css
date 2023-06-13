@@ -7,6 +7,8 @@ fieldset legend {
     width: 100%;
     margin-bottom: 20px;
     border-bottom: 2px solid #c7c7c7;
+    font-size: 20px;
+    color: #3d3d3d;
 }
 
 .categories-filter {

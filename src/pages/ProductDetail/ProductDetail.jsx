@@ -7,16 +7,15 @@ import { useSelector } from "react-redux";
 import { useCart } from "../../hooks/queries/useCart";
 
 const ProductDetail = () => {
-  const { cartQuery } = useCart();
+  const cartQuery = useCart();
   const navigate = useNavigate();
   const { productId } = useParams();
   const { mutate } = useAddProductToCart();
   const isLogged = useSelector((store) => store.auth.isLogged);
   const { data, isLoading, isError, error } = useProductById(productId);
 
-  const isProductInCart = cartQuery.data?.some(
-    (cartProduct) => cartProduct.productId === data.id
-  ) ?? false;
+  const isProductInCart = 
+    cartQuery.data?.some((cartProduct) => cartProduct.productId === data.id) ?? false;
 
   const quantityInCart = 
     cartQuery.data?.find((cartProduct) => Number(cartProduct.productId) === Number(productId))?.quantity ?? 1;
@@ -43,7 +42,7 @@ const ProductDetail = () => {
     setQuantity(Number(quantityInCart));
   }, [quantityInCart]);
 
-  if (isLoading) return <p>Loaing Product...</p>;
+  if (isLoading) return <p>Loading Product...</p>;
 
   if (isError) return <p>{error.message ?? "No se pudo cargar el producto"}</p>;
 
@@ -78,6 +77,7 @@ const ProductDetail = () => {
               </div>
             </div>
           </div>
+          
           {!isProductInCart && (
             <button onClick={handleAddCart}>Add to cart</button>
           )}

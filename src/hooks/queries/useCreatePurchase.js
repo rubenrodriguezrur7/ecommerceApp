@@ -11,7 +11,7 @@ export const useCreatePurchase = () => {
     onSuccess: async () => {
       await queryClient.invalidateQueries({
         queryKey: ["cart"] });
-      await queryClient.invalidateQueries({ queryKey: ["purchases"]})
+      await queryClient.invalidateQueries({ queryKey: ["purchases"] });
     },
   });
 

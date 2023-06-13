@@ -31,7 +31,7 @@ const Home = () => {
           initialCategories={categories} />
       </aside>
 
-      <section>
+      <section className="home-form">
         <Form id={formId} ref={formRef}>
           <input
             type="search"

@@ -56,8 +56,8 @@ const Cart = ({ isVisible }) => {
 
               <button
                 onClick={handleCheckout}
-                disabled={createPurchaseMutation.isLoading || isLoading}>
-                
+                disabled={createPurchaseMutation.isLoading || isLoading}
+              >
                 Checkout
               </button>
             </div>

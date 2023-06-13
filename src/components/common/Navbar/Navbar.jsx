@@ -26,13 +26,13 @@ const Navbar = ({ updateCartIsVisible }) => {
   }
 
   return (
-    <header>
+    <header className="header">
       <Link to="/" className="link">
         <div><h1>e-commerce</h1></div>
       </Link>
 
       <nav>
-        <ul>
+        <ul className="header_nav_list">
           <li>
             <NavLink to={userTo} className={getclass}>
               <i className="bx bx-user"></i>

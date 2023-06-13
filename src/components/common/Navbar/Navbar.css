@@ -1,7 +1,8 @@
-header {
+.header {
     position: sticky;
     top: 0;
     z-index: 1;
+    height: 80px;
     display: flex;
     justify-content: space-between;    
     align-items: center;
@@ -13,31 +14,19 @@ header {
     text-decoration: none;
 }
 
-header div {
-    width: 710px;
-    padding: 12px;
-}
-
-header h1 {
+.header h1 {
     color: #f85555;
 }
 
-header ul {
+.header_nav_list {
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: center;
-}
-
-header ul li {
-    width: 150px;
-    padding: 6px;
-    text-align: center;
-    border: 1px solid #c7c7c7;
+    align-items: center;
+    gap: 3rem;
+    font-size: 3rem;
     list-style: none;
-    font-size: 20px;
-}
-
-header ul li:hover {
-    background-color: #c7c7c7;
+    color: #f85555;
 }
 
 .header_nav_link {
@@ -48,7 +37,9 @@ header ul li:hover {
     color: orange;
 }
 
-i {
-    color: #f85555;
+.header_nav_btn {
+    font-size: inherit;
+    background-color: transparent;
+    border: none;
 }
 

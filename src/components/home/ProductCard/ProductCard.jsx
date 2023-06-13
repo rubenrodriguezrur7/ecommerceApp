@@ -24,7 +24,7 @@ const ProductCard = ({ product }) => {
 };
 
   return (
-    <Link to={"/product/" + product.id}>     
+    <Link to={"/product/" + product.id} className="link">     
       <article className="product-cart">
         <header className="product-cart_header">
           <div className="product-cart_container-img">
