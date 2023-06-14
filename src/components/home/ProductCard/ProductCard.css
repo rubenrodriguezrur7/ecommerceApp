@@ -60,4 +60,16 @@
     color: #515151;
 }
 
+.product-cart_btn {
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    background-color: #f85555;
+    border-radius: 50%;
+    border: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
 

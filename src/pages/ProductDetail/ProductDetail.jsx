@@ -5,6 +5,7 @@ import ProductList from "../../components/home/ProductList/ProductList";
 import { useAddProductToCart } from "../../hooks/queries/useAddProductToCart";
 import { useSelector } from "react-redux";
 import { useCart } from "../../hooks/queries/useCart";
+import "./ProductDetail.css";
 
 const ProductDetail = () => {
   const cartQuery = useCart();
@@ -48,12 +49,12 @@ const ProductDetail = () => {
 
   return (
     <section>
-      <section>
+      <section className="product-detail_container">
         <div>
           <img src={data.images[0].url} alt={data.title}/>
         </div>
 
-        <div>
+        <div className="product-detail_body">
           <h3>{data.brand}</h3>
           <h2>{data.title}</h2>
 
@@ -71,18 +72,18 @@ const ProductDetail = () => {
               <h3>Quantity</h3>
 
               <div>
-                <button onClick={decrement}>-</button>
+                <button onClick={decrement} className="product-detail_quantity">-</button>
                 <span>{quantity}</span>
-                <button onClick={increment}>+</button>
+                <button onClick={increment} className="product-detail_quantity">+</button>
               </div>
             </div>
           </div>
           
           {!isProductInCart && (
-            <button onClick={handleAddCart}>Add to cart</button>
+            <button onClick={handleAddCart} className="product-detail_addcart">Add to cart</button>
           )}
 
-          {isProductInCart && <button>Update in cart</button>}
+          {isProductInCart && <button className="product-detail_addcart">Update in cart</button>}
         </div>
       </section>
       
