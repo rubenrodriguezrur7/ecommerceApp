@@ -3,7 +3,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import { reset } from "../../../store/slices/authSlice";
 import "./Navbar.css";
 
-const Navbar = ({ updateCartIsVisible }) => {
+const Navbar = ({ updateCartVisible }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const isLogged = useSelector((store) => store.auth.isLogged);
@@ -21,7 +21,7 @@ const Navbar = ({ updateCartIsVisible }) => {
   };
 
   const handleCartClick = () => {
-    if (isLogged) updateCartIsVisible();
+    if (isLogged) updateCartVisible();
     else navigate("/login");
   }
 

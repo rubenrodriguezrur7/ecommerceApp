@@ -8,8 +8,18 @@
     height: 40px;
     margin: 35px 0 20px 50px;
     padding-left: 10px;
-    font-size: 18px;
+    font-size: 17px;
     color: #434343;
-    
+    border: 1px solid #dcd9d9;
+}
+
+.home-form button {
+    width: 70px;
+    height: 40px;
+    background-color: #f85555;
+    border: none;
+    font-size: 17px;
+    padding: 0.5rem;
+    color: white;
 }
 

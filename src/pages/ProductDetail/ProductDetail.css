@@ -16,7 +16,9 @@
 
 .product-detail_quantity {
     width: 30px;
+    height: 30px;
     margin: 8px;
+    font-size: 20px;
 }
 
 .product-detail_addcart {
@@ -27,4 +29,9 @@
     font-size: 15px;
     color: white;
     cursor: pointer;
+}
+
+.product-detail_similars {
+    margin: 100px 0;
+    text-align: center;
 }

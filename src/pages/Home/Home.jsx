@@ -40,6 +40,9 @@ const Home = () => {
             onChange={(e) => setTitleValue(e.target.value)}
             placeholder="what are your looking for?"
           />
+          <button>
+            <i className='bx bx-search' ></i>
+          </button>
         </Form>  
         <ProductList categories={categories} title={title}/>
       </section>

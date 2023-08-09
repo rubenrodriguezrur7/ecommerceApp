@@ -31,10 +31,10 @@ const CartProduct = ({ cartProduct }) => {
 
   const handleDelete = () => {
     if (isLogged) deleteMutation.mutate(cartProduct.id);
-  }
+  };
 
   return (
-    <article className="cartProduct">
+    <article className="cart-product">
       <div className="cart-product_img">
         <img
           src={cartProduct.product.images[0].url}
@@ -43,31 +43,31 @@ const CartProduct = ({ cartProduct }) => {
 
       <div className="cart-product_detail">
         <header className="cart-product_header">
-          <h4>{cartProduct.product.title}</h4>
-          <button className="car-product_btn" 
+          <h4 className="cart-product_title">{cartProduct.product.title}</h4>
+          <button className="cart-product_btn" 
             onClick={handleDelete}
             disabled={deleteMutation.isLoading}>
             <i className="bx bx-trash"></i>
           </button>
         </header>
 
-        <div>
+        <div className="cart-product_controls-container">
           <div className="cart-product_controls">
-            <button className="cart-product_btn" onClick={decrement}>-</button>
+            <button className="cart-product_btns" onClick={decrement}>-</button>
             <span>{quantity}</span>
-            <button className="cart-product_btn" onClick={increment}>+</button>
+            <button className="cart-product_btns" onClick={increment}>+</button>
           </div>
 
           {initialQuantity !== quantity && (
-            <button onClick={handleUpdate} disabled={isLoading}>
+            <button className="cart-product_update-btn" onClick={handleUpdate} disabled={isLoading}>
               Update Cart
             </button>
           )}
         </div>
 
-        <div>
+        <div className="cart-product_total-container">
           <h5>Total:</h5>
-          <p><em>$ {initialQuantity * price}</em></p>
+          <p><em>$ {(initialQuantity * price).toFixed(2)}</em></p>
         </div>
       </div>
     </article>

@@ -16,7 +16,7 @@ const ProductDetail = () => {
   const { data, isLoading, isError, error } = useProductById(productId);
 
   const isProductInCart = 
-    cartQuery.data?.some((cartProduct) => cartProduct.productId === data.id) ?? false;
+    cartQuery.data?.some((cartProduct) => cartProduct.productId === data?.id) ?? false;
 
   const quantityInCart = 
     cartQuery.data?.find((cartProduct) => Number(cartProduct.productId) === Number(productId))?.quantity ?? 1;
@@ -50,8 +50,8 @@ const ProductDetail = () => {
   return (
     <section>
       <section className="product-detail_container">
-        <div>
-          <img src={data.images[0].url} alt={data.title}/>
+        <div className="product-detail_container-img">
+          <img src={data.images?.[0].url} alt={data.title}/>
         </div>
 
         <div className="product-detail_body">
@@ -86,7 +86,8 @@ const ProductDetail = () => {
           {isProductInCart && <button className="product-detail_addcart">Update in cart</button>}
         </div>
       </section>
-      
+
+      <h2 className="product-detail_similars">More similar products for you</h2>
       <ProductList categories={data.categoryId} excludeIds={[data.id]} />
     </section>
   );

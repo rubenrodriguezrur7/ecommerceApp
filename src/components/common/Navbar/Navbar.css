@@ -7,7 +7,7 @@
     justify-content: space-between;    
     align-items: center;
     background-color: #ffffff;
-    border: 1px solid #c7c7c7;;
+    border: 1px solid #c7c7c7;
 }
 
 .link {
@@ -15,18 +15,19 @@
 }
 
 .header h1 {
+    padding-left: 15px;
     color: #f85555;
 }
 
 .header_nav_list {
     margin: 0;
-    padding: 0;
+    padding-right: 20px;
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 8rem;
     font-size: 3rem;
     list-style: none;
-    color: #f85555;
+    color: #ababab;
 }
 
 .header_nav_link {
@@ -34,12 +35,17 @@
 }
 
 .header_nav_link--active {
-    color: orange;
+    color: #f85555;
 }
 
 .header_nav_btn {
     font-size: inherit;
     background-color: transparent;
     border: none;
+    color: #ababab;
+    cursor: pointer;
 }
 
+.header_nav_btn:active {
+    color: #f85555;
+}

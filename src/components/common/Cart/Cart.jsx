@@ -13,14 +13,14 @@ const Cart = ({ isVisible }) => {
     const quantity = Number(cartProduct.quantity)
     const price = Number(cartProduct.product.price);
 
-    return acc + quantity + price;
+    return acc + quantity * price;
   };
 
   const total = data?.reduce(reducer, 0) ?? 0;
 
   const toggleCart = isVisible
     ? "wrapper-cart"
-    : "wrapper-cart wrapper-cart--hidden";
+    : "wrapper-cart--hidden";
 
     const handleCheckout = () => {
       if (isLogged) createPurchaseMutation.mutate()

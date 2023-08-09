@@ -42,20 +42,23 @@ const LoginForm = ({ onLogin }) => {
       <div>
         <label htmlFor={passwordId}>Password</label>
       </div>
-      <input className="form-input"
-        type={isPasswordVisible ? "text": "password"}
-        value={formData.password}
-        onChange={handleChange}
-        id={passwordId}
-        name="password"
-        required
-      />
-      <button
-        type="button"
-        onClick={() => setisPasswordVisible(!isPasswordVisible)}
-      >
-        <i className="bx bx-low-vision"></i>
-      </button>
+
+      <div className="form-password">
+        <input className="form-input"
+          type={isPasswordVisible ? "text": "password"}
+          value={formData.password}
+          onChange={handleChange}
+          id={passwordId}
+          name="password"
+          required
+        />
+        <button className="password-btn"
+          type="button"
+          onClick={() => setisPasswordVisible(!isPasswordVisible)}
+        >
+          <i className="bx bx-low-vision"></i>
+        </button>
+      </div>
 
       <div className="form-login_button">
         <button type="submit">Login</button>

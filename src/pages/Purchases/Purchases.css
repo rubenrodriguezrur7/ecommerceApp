@@ -1,0 +1,14 @@
+.purchases {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 5rem;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+}
+.purchases h1 {
+    color: #515151;
+    font-size: 3rem;
+}

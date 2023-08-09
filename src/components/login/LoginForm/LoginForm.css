@@ -11,8 +11,24 @@
     height: 35px;
 }
 
-.bx bx-low-vision {
+.form-password {
     width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.password-btn {
+    background-color: #f85555;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    font-size: 1.6rem;
+    height: 35px;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-login_button {
@@ -26,4 +42,5 @@
 .form-login_button button {
     background-color: #f85555;
     border: none;
+    cursor: pointer;
 }

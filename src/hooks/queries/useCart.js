@@ -6,7 +6,7 @@ export const useCart = () => {
   const { token, isLogged } = useSelector((store) => store.auth);
 
   const query = useQuery({
-    queryKey: ["cart", isLogged],
+    queryKey: ["cart"],
     queryFn: () => getCart(token),
     enabled: isLogged,
   });
